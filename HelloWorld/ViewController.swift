@@ -9,16 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var helloWorld: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var hiddenLabel: UILabel!
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-  
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -32,17 +32,17 @@ class ViewController: UIViewController {
         
         //animate Hello World label
         UIView.animate(withDuration: 1.0, animations: {
-         
-           // self.helloWorld.center.y += self.view.bounds.height
             
-            }, completion:nil)
+            // self.helloWorld.center.y += self.view.bounds.height
+            
+        }, completion:nil)
         
-         //animate background color change
+        //animate background color change
         UIView.animate(withDuration: 2.0, delay: 0.0, options: [], animations: {
-           
-           //self.view.backgroundColor = UIColor.yellowColor()
             
-            }, completion:nil)
+            //self.view.backgroundColor = UIColor.yellowColor()
+            
+        }, completion:nil)
     }
     
     
@@ -58,12 +58,12 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 2.5, animations: {
             self.view.backgroundColor = UIColor.black
             
-            }, completion:nil)
+        }, completion:nil)
         
         UIView.animate(withDuration: 1.0, delay: 1.5, options: [], animations: {
             self.hiddenLabel.alpha = 1.0
             
         }, completion:nil)
-      
+        
     }
 }
